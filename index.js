@@ -1,14 +1,15 @@
+#!/usr/bin/env node
 "use strict";
 
-const PATH = require("path");    
-const PLAN_REVIEWER = require("./lib/PlanReviewer"); 
+const Path = require("path");    
+const PlanReviewer = require("./lib/PlanReviewer");
 
-let main = function() {   
+function main() {
+    const [, , _fileName] = process.argv;
 
-    let fileName = (process.argv.length < 3) ? "plan.json" : process.argv[2];     
-    let planFile = PATH.join(process.cwd(), fileName);    
-    let reviewer = new PLAN_REVIEWER();
-    reviewer.process(planFile);
+    let fileName = Path.resolve(_fileName);
+    let reviewer = new PlanReviewer();
+    reviewer.process(fileName);
 }
 
 main();

@@ -1,9 +1,10 @@
 {
-    "name": "terraform-plan-reviewer",
-    "version": "0.0.1",
-    "dependencies": {
-      "deepmerge": "^3.3.0",
-      "deep-eql": "^4.0.0"
-    }
+  "name": "terraform-plan-reviewer",
+  "version": "0.0.1",
+  "dependencies": {
+    "@types/node": "^12.12.9",
+    "deep-eql": "^4.0.0",
+    "deepmerge": "^3.3.0",
+    "webpack-config-prefabs": "0.0.2"
   }
-  
+}
